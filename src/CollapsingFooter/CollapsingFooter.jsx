@@ -9,13 +9,9 @@ class CollapsingFooter extends Component {
     changeNavBar: false,
   };
 
-  toggleMenu = (e) => {
-    e.preventDefault();
-    this.setState({ changeNavBar: !this.state.changeNavBar });
-  };
-
   toggleCollapse = (e) => {
     e.preventDefault();
+    this.setState({ changeNavBar: !this.state.changeNavBar });
     if (this.state.open === false) {
       this.setState({ open: true });
     } else if (this.state.open === true) {
@@ -44,17 +40,15 @@ class CollapsingFooter extends Component {
             labore wes anderson cred nesciunt sapiente ea proident.
           </div>
         </Collapse>
+
         <Button
+          className={this.state.changeNavBar ? "change" : ""}
           id="collapsingFooterButton"
           onClick={this.toggleCollapse}
           aria-controls="example-collapse-text"
           aria-expanded={this.state.open}
         >
-          <div
-            id="menuIconContainer"
-            className={this.state.changeNavBar ? "change" : ""}
-            onClick={this.toggleMenu}
-          >
+          <div id="menuIconContainer">
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
