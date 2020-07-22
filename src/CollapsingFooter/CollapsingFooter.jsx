@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import "./CollapsingFooter.css";
 
 function CollapsingFooter() {
   const [open, setOpen] = useState(false);
@@ -10,7 +11,16 @@ function CollapsingFooter() {
         <div id="example-collapse-text">
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
           terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-          labore wes anderson cred nesciunt sapiente ea proident.
+          labore wes anderson cred nesciunt sapiente ea proident. Anim pariatur
+          cliche reprehenderit, enim eiusmod high life accusamus terry
+          richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore
+          wes anderson cred nesciunt sapiente ea proident. Anim pariatur cliche
+          reprehenderit, enim eiusmod high life accusamus terry richardson ad
+          squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+          cred nesciunt sapiente ea proident. Anim pariatur cliche
+          reprehenderit, enim eiusmod high life accusamus terry richardson ad
+          squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+          cred nesciunt sapiente ea proident.
         </div>
       </Collapse>
       <Button
@@ -18,7 +28,9 @@ function CollapsingFooter() {
         aria-controls="example-collapse-text"
         aria-expanded={open}
       >
-        Click Me
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
       </Button>
     </>
   );
