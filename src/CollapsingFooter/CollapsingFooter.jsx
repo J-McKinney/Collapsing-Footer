@@ -1,44 +1,3 @@
-// import React, { useState } from "react";
-// import Button from "react-bootstrap/Button";
-// import Collapse from "react-bootstrap/Collapse";
-// import "./CollapsingFooter.css";
-
-// function CollapsingFooter() {
-//   const [open, setOpen] = useState(false);
-//   return (
-//     <>
-//       <Collapse in={open}>
-//         <div id="example-collapse-text" className="collapsingContent">
-//           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-//           terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-//           labore wes anderson cred nesciunt sapiente ea proident. Anim pariatur
-//           cliche reprehenderit, enim eiusmod high life accusamus terry
-//           richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore
-//           wes anderson cred nesciunt sapiente ea proident. Anim pariatur cliche
-//           reprehenderit, enim eiusmod high life accusamus terry richardson ad
-//           squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-//           cred nesciunt sapiente ea proident. Anim pariatur cliche
-//           reprehenderit, enim eiusmod high life accusamus terry richardson ad
-//           squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-//           cred nesciunt sapiente ea proident.
-//         </div>
-//       </Collapse>
-//       <Button
-//         className="collapsingFooterButton"
-//         onClick={() => setOpen(!open)}
-//         aria-controls="example-collapse-text"
-//         aria-expanded={open}
-//       >
-//         <div className="bar1"></div>
-//         <div className="bar2"></div>
-//         <div className="bar3"></div>
-//       </Button>
-//     </>
-//   );
-// }
-
-// export default CollapsingFooter;
-
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
@@ -60,9 +19,9 @@ class CollapsingFooter extends Component {
     if (this.state.open === false) {
       this.setState({ open: true });
     } else if (this.state.open === true) {
-      this.setState({ open: true });
+      this.setState({ open: false });
     } else {
-      this.setState({ open: true });
+      this.setState({ open: false });
     }
   };
 
@@ -86,14 +45,20 @@ class CollapsingFooter extends Component {
           </div>
         </Collapse>
         <Button
-          className="collapsingFooterButton"
+          id="collapsingFooterButton"
           onClick={this.toggleCollapse}
           aria-controls="example-collapse-text"
           aria-expanded={this.state.open}
         >
-          <div className="bar1"></div>
-          <div className="bar2"></div>
-          <div className="bar3"></div>
+          <div
+            id="menuIconContainer"
+            className={this.state.changeNavBar ? "change" : ""}
+            onClick={this.toggleMenu}
+          >
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
         </Button>
       </>
     );

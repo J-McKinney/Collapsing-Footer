@@ -1,3 +1,7 @@
+#collapsingFooterButton{
+    float: right;
+}
+
 #menuIconContainer {
   cursor: pointer;
   float: right;
