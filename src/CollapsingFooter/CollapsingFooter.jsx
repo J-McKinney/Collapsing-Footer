@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import "./CollapsingFooter.css";
@@ -24,22 +27,46 @@ class CollapsingFooter extends Component {
   render() {
     return (
       <>
-        <Collapse in={this.state.open}>
-          <div id="example-collapse-text" className="collapsingContent">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident. Anim
-            pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident. Anim
-            pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident. Anim
-            pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </Collapse>
+        <Container className="collapsingFooterContainer">
+          <Collapse in={this.state.open}>
+            <div id="example-collapse-text" className="collapsingContent">
+              <Row>
+                <Col>
+                  <ul>
+                    <li>
+                      <h5>The World Of React 1</h5>
+                    </li>
+                    <li>
+                      <h5>The World Of React 2</h5>
+                    </li>
+                    <li>
+                      <h5>The World Of React 3</h5>
+                    </li>
+                    <li>
+                      <h5>The World Of React 4</h5>
+                    </li>
+                  </ul>
+                </Col>
+                <Col>
+                  <ul>
+                    <li>
+                      <h5>The World Of React 5</h5>
+                    </li>
+                    <li>
+                      <h5>The World Of React 6</h5>
+                    </li>
+                    <li>
+                      <h5>The World Of React 7</h5>
+                    </li>
+                    <li>
+                      <h5>The World Of React 8</h5>
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </div>
+          </Collapse>
+        </Container>
 
         <Button
           className={this.state.changeNavBar ? "change" : ""}

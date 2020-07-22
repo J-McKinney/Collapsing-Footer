@@ -1,5 +1,32 @@
-#collapsingFooterButton{
-    float: right;
+.collapsingFooterContainer {
+  width: 100%;
+  padding-top: 2%;
+  justify-content: center;
+  /*Slider Footer*/
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding-top: 10px;
+}
+
+h5 {
+  font-weight: bold;
+  font-style: italic;
+  color: #282c34;
+}
+
+#collapsingFooterButton {
+  float: right;
+  margin-bottom: 3%;
 }
 
 #menuIconContainer {
